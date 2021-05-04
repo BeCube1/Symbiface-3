@@ -1,0 +1,505 @@
+<?xml version="1.0"?>
+<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.0</Version>
+  <ProjectName>Symbiface3</ProjectName>
+  <StartupResourceId>5</StartupResourceId>
+  <Resources>
+    <Resource>
+      <Id>3</Id>
+      <DisplayName>Test.bin</DisplayName>
+      <RelativePath>Test.bin</RelativePath>
+      <IdDependencies />
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>4</Id>
+      <DisplayName>Start.cpcdsk</DisplayName>
+      <RelativePath>Start.cpcdsk</RelativePath>
+      <IdDependencies>
+        <int>18</int>
+      </IdDependencies>
+      <IdOutputs>
+        <int>5</int>
+        <int>6</int>
+      </IdOutputs>
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>5</Id>
+      <DisplayName>Start.dsk</DisplayName>
+      <RelativePath>Start.dsk</RelativePath>
+      <IdDependencies>
+        <int>4</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>6</Id>
+      <DisplayName>Start.filelist</DisplayName>
+      <RelativePath>Start.filelist</RelativePath>
+      <IdDependencies>
+        <int>4</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>7</Id>
+      <DisplayName>Start.cpcdsk.h</DisplayName>
+      <RelativePath>Start.cpcdsk.h</RelativePath>
+      <IdDependencies />
+      <IdOutputs />
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>true</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>17</Id>
+      <DisplayName>SF3-RSX.asm</DisplayName>
+      <RelativePath>SF3-RSX.asm</RelativePath>
+      <IdDependencies>
+        <int>22</int>
+        <int>24</int>
+        <int>26</int>
+        <int>28</int>
+        <int>30</int>
+        <int>34</int>
+        <int>35</int>
+        <int>41</int>
+        <int>43</int>
+        <int>45</int>
+        <int>51</int>
+        <int>49</int>
+      </IdDependencies>
+      <IdOutputs>
+        <int>18</int>
+      </IdOutputs>
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>18</Id>
+      <DisplayName>SF3-RSX.bin</DisplayName>
+      <RelativePath>SF3-RSX.bin</RelativePath>
+      <IdDependencies>
+        <int>17</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>21</Id>
+      <DisplayName>Version.h</DisplayName>
+      <RelativePath>Version.h</RelativePath>
+      <IdDependencies />
+      <IdOutputs />
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>true</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>22</Id>
+      <DisplayName>MySubRoutines4SF3ROM.asm</DisplayName>
+      <RelativePath>MySubRoutines4SF3ROM.asm</RelativePath>
+      <IdDependencies />
+      <IdOutputs>
+        <int>23</int>
+      </IdOutputs>
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>23</Id>
+      <DisplayName>MySubRoutines4SF3ROM.bin</DisplayName>
+      <RelativePath>MySubRoutines4SF3ROM.bin</RelativePath>
+      <IdDependencies>
+        <int>22</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>24</Id>
+      <DisplayName>RTC.asm</DisplayName>
+      <RelativePath>RTC.asm</RelativePath>
+      <IdDependencies />
+      <IdOutputs>
+        <int>25</int>
+      </IdOutputs>
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>25</Id>
+      <DisplayName>RTC.bin</DisplayName>
+      <RelativePath>RTC.bin</RelativePath>
+      <IdDependencies>
+        <int>24</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>26</Id>
+      <DisplayName>OLED.asm</DisplayName>
+      <RelativePath>OLED.asm</RelativePath>
+      <IdDependencies />
+      <IdOutputs>
+        <int>27</int>
+      </IdOutputs>
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>27</Id>
+      <DisplayName>OLED.bin</DisplayName>
+      <RelativePath>OLED.bin</RelativePath>
+      <IdDependencies>
+        <int>26</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>28</Id>
+      <DisplayName>Version.asm</DisplayName>
+      <RelativePath>Version.asm</RelativePath>
+      <IdDependencies />
+      <IdOutputs>
+        <int>29</int>
+      </IdOutputs>
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>29</Id>
+      <DisplayName>Version.bin</DisplayName>
+      <RelativePath>Version.bin</RelativePath>
+      <IdDependencies>
+        <int>28</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>30</Id>
+      <DisplayName>Buzzer.asm</DisplayName>
+      <RelativePath>Buzzer.asm</RelativePath>
+      <IdDependencies />
+      <IdOutputs>
+        <int>31</int>
+      </IdOutputs>
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>31</Id>
+      <DisplayName>Buzzer.bin</DisplayName>
+      <RelativePath>Buzzer.bin</RelativePath>
+      <IdDependencies>
+        <int>30</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>34</Id>
+      <DisplayName>DataArea.h</DisplayName>
+      <RelativePath>DataArea.h</RelativePath>
+      <IdDependencies>
+        <int>21</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>true</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>35</Id>
+      <DisplayName>Reset.asm</DisplayName>
+      <RelativePath>Reset.asm</RelativePath>
+      <IdDependencies />
+      <IdOutputs>
+        <int>36</int>
+      </IdOutputs>
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>36</Id>
+      <DisplayName>Reset.bin</DisplayName>
+      <RelativePath>Reset.bin</RelativePath>
+      <IdDependencies>
+        <int>35</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>41</Id>
+      <DisplayName>ROM.asm</DisplayName>
+      <RelativePath>ROM.asm</RelativePath>
+      <IdDependencies />
+      <IdOutputs>
+        <int>42</int>
+      </IdOutputs>
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>42</Id>
+      <DisplayName>ROM.bin</DisplayName>
+      <RelativePath>ROM.bin</RelativePath>
+      <IdDependencies>
+        <int>41</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>43</Id>
+      <DisplayName>Net.asm</DisplayName>
+      <RelativePath>Net.asm</RelativePath>
+      <IdDependencies />
+      <IdOutputs>
+        <int>44</int>
+      </IdOutputs>
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>44</Id>
+      <DisplayName>Net.bin</DisplayName>
+      <RelativePath>Net.bin</RelativePath>
+      <IdDependencies>
+        <int>43</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>45</Id>
+      <DisplayName>Log.asm</DisplayName>
+      <RelativePath>Log.asm</RelativePath>
+      <IdDependencies />
+      <IdOutputs>
+        <int>46</int>
+      </IdOutputs>
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>46</Id>
+      <DisplayName>Log.bin</DisplayName>
+      <RelativePath>Log.bin</RelativePath>
+      <IdDependencies>
+        <int>45</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>49</Id>
+      <DisplayName>System.asm</DisplayName>
+      <RelativePath>System.asm</RelativePath>
+      <IdDependencies />
+      <IdOutputs>
+        <int>50</int>
+      </IdOutputs>
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>50</Id>
+      <DisplayName>System.bin</DisplayName>
+      <RelativePath>System.bin</RelativePath>
+      <IdDependencies>
+        <int>49</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>51</Id>
+      <DisplayName>Misc.asm</DisplayName>
+      <RelativePath>Misc.asm</RelativePath>
+      <IdDependencies />
+      <IdOutputs>
+        <int>52</int>
+      </IdOutputs>
+      <IsOutputResource>false</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+    <Resource>
+      <Id>52</Id>
+      <DisplayName>Misc.bin</DisplayName>
+      <RelativePath>Misc.bin</RelativePath>
+      <IdDependencies>
+        <int>51</int>
+      </IdDependencies>
+      <IdOutputs />
+      <IsOutputResource>true</IsOutputResource>
+      <IsIncludeResource>false</IsIncludeResource>
+    </Resource>
+  </Resources>
+  <TreeNode>
+    <IsFolder>false</IsFolder>
+    <FolderName />
+    <ResourceId>0</ResourceId>
+    <ChildNodes>
+      <Node>
+        <IsFolder>true</IsFolder>
+        <FolderName>Source</FolderName>
+        <ResourceId>0</ResourceId>
+        <ChildNodes>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>17</ResourceId>
+            <ChildNodes />
+            <Expanded>true</Expanded>
+          </Node>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>21</ResourceId>
+            <ChildNodes />
+            <Expanded>false</Expanded>
+          </Node>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>22</ResourceId>
+            <ChildNodes />
+            <Expanded>true</Expanded>
+          </Node>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>24</ResourceId>
+            <ChildNodes />
+            <Expanded>true</Expanded>
+          </Node>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>26</ResourceId>
+            <ChildNodes />
+            <Expanded>true</Expanded>
+          </Node>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>28</ResourceId>
+            <ChildNodes />
+            <Expanded>true</Expanded>
+          </Node>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>30</ResourceId>
+            <ChildNodes />
+            <Expanded>true</Expanded>
+          </Node>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>34</ResourceId>
+            <ChildNodes />
+            <Expanded>false</Expanded>
+          </Node>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>35</ResourceId>
+            <ChildNodes />
+            <Expanded>true</Expanded>
+          </Node>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>41</ResourceId>
+            <ChildNodes />
+            <Expanded>true</Expanded>
+          </Node>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>43</ResourceId>
+            <ChildNodes />
+            <Expanded>true</Expanded>
+          </Node>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>45</ResourceId>
+            <ChildNodes />
+            <Expanded>true</Expanded>
+          </Node>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>49</ResourceId>
+            <ChildNodes />
+            <Expanded>true</Expanded>
+          </Node>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>51</ResourceId>
+            <ChildNodes />
+            <Expanded>true</Expanded>
+          </Node>
+        </ChildNodes>
+        <Expanded>true</Expanded>
+      </Node>
+      <Node>
+        <IsFolder>true</IsFolder>
+        <FolderName>Output</FolderName>
+        <ResourceId>0</ResourceId>
+        <ChildNodes>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>4</ResourceId>
+            <ChildNodes />
+            <Expanded>true</Expanded>
+          </Node>
+          <Node>
+            <IsFolder>false</IsFolder>
+            <FolderName />
+            <ResourceId>7</ResourceId>
+            <ChildNodes />
+            <Expanded>false</Expanded>
+          </Node>
+        </ChildNodes>
+        <Expanded>true</Expanded>
+      </Node>
+    </ChildNodes>
+    <Expanded>true</Expanded>
+  </TreeNode>
+  <ResourceId>52</ResourceId>
+  <GlobalSettings>
+    <Screen1_TopScreenPtr>128</Screen1_TopScreenPtr>
+    <Screen1_BottomScreenPtr>16384</Screen1_BottomScreenPtr>
+    <Screen1_TopHeightInChars>20</Screen1_TopHeightInChars>
+    <Screen1_BottomHeightInChars>21</Screen1_BottomHeightInChars>
+    <CRTC_Register1>48</CRTC_Register1>
+    <CRTC_Register6>41</CRTC_Register6>
+    <CRTC_Register9>4</CRTC_Register9>
+  </GlobalSettings>
+</Project>

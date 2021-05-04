@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Document xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.2</Version>
+  <Items>
+    <Item>
+      <ResourceID>18</ResourceID>
+      <AmsdosFilename>S3.ROM</AmsdosFilename>
+      <LoadAdress>16384</LoadAdress>
+      <ExecAdress>16384</ExecAdress>
+      <ItemType>Binary</ItemType>
+      <CopyToWinAPEROMFolder>true</CopyToWinAPEROMFolder>
+      <TrackLoaderItem>false</TrackLoaderItem>
+      <IsDuplicate>false</IsDuplicate>
+      <DuplicatedIndex>-1</DuplicatedIndex>
+    </Item>
+  </Items>
+  <GenerateHFE>false</GenerateHFE>
+  <TrackLoaderDisc>false</TrackLoaderDisc>
+</Document>
