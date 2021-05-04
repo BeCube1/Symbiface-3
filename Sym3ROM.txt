@@ -1,0 +1,103 @@
+              Symbiface 3-RSX (Programmed by SOS in 2018-)
+------------------------------------------------------------------------------
+           (Ask me for support in the www.cpcwiki.eu-community)
+
+ROM
+===
+|ROMS:          Display all active ROM's
+|ROMS,<Number>: Display the RSX of one ROM, e.g. |ROMS,7 => Display all RSX of ROM7
+|ROMUP,<Filename>,<Number>:Upload a ROM to the ROM-Slot, Fileheader is detected, so it does not matter
+                if the file has a header.
+                e.g. |ROMUP,"YANCC.ROM",5   => Upload YANCC to ROM-Slot 5
+|ROMSET,<ROM>,<0/1>: Enable or disable a ROM,
+                e.g. |ROMSET,3,0  will disable rom 3
+                     |ROMSET,3,1  will enable rom 3
+
+
+
+RTC
+===
+|RRESET:                                 Resets the RTC
+|RSDATE,<Day>,<Month>,<Year> (2digits):  Sets the RTC-Date
+                                         e.g. |RSDATE,31,12,19 sets the Date to "31.12.2019"
+|RGDATE:                                 Get the actual Date
+                                         e.g. |RGDATE returns "31/12/19"
+|RSTIME,<Hour>,<Minutes>,<Seconds>:      Sets the RTC-Time
+                                         e.g. |RSTIME,9,44,30 sets the Time to "09:44:30"
+|RGTIME:                                 Get the actual Time
+                                         e.g. |RGTIME returns "9:44:30"
+
+
+OLED
+====
+|OCLS:	Clears the OLED-Display
+|OPRINT:Print a string to the OLED, maximum is 12 characters
+        e.g. |OPRINT,"HELLO!"
+|OSCROLL:Makes the content on the OLED-Display scroll,
+        Params:
+        1. De-Activated scroll
+        2. Direction
+        3. Start page
+        4. Interval
+        5. End page
+        6. vertical scolling offset
+        7. Activated scroll
+                e.g. |OSCROLL,&2e,&a3,&0,&2,&2,&b,&2f
+
+Buzzer
+======
+|BUZZ:	Make a "beep", Use: |BUZZ,tone,rhythm		(e.g. |BUZZ,2,3)
+	Values:
+		Tone 	00 buzzer off
+			01 low
+			02 middle
+			03 high
+		rhythm	00 continious
+			01 slow
+			02 middle
+			03 fast
+	|BUZZ without a param gives you silence ;-)
+
+|BEEP: 	The same as |BUZZ
+
+
+LED's
+=====
+|LEDT:	Tests the LED's
+|LEDV:	Set the LED's: |LEDV,LeftLED-Value,RightLED-Value
+        LED-Value - One Bit per LED, e.g.
+        |LEDV,&x00000001,&x00100000      => set on the left site the lowest LED, on the right site the third LED from the top
+        |LEDV,&x00000000,&x00100100      => set on the left site no LED (all goes dark), on the right site the third and sixth LED from the top
+
+
+MISC
+====
+|VER:	Shows the Symbiface 3 - Version
+|LOG:   Shows Log (SPACE for pause, ESC for cancel)
+|MEMTEST: Tests the Symbiface 3-RAM
+|GERR:  Shows the last Error/Status-Text
+|MEASURE: Get  Power Supply 5v , RTC batt voltage , ARM temperature
+|DFU:   Shows the actual Firmware-File-Name
+
+NET
+===
+|IPCONFIG: Shows the actual IP-Data
+
+Internal:
+RSX &90-   Use for NET-Applications (actual Telnet-Client)
+
+
+
+
+Changelog of Versions
+---------------------
+060120b
+- Added: RTC-RSX
+- Added: |DFU
+- Added: |IPCONFIG
+
+
+
+030419b
+- First Release-Version
+
