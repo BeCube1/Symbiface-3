@@ -400,10 +400,6 @@ DisplayNetConfig
 ;4x print inp(&hfd49); dns1: 168 2 254 0
 ;4x print inp(&hfd49); dns2: 0 0 0 0
 
-;	call ARM_ready
-;	call WIFI_ready
-;	call ARM_response
-;	call WIFI_response
 	
 	ld bc,&FD41
 	ld a,7
@@ -417,7 +413,7 @@ DisplayNetConfig
 	ld a,90
 	out (c),a
 
-	call ARM_response
+	call wait_for_ARM_response
 	call WIFI_response
 
 	; ---- Output ----

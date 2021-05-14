@@ -38,7 +38,7 @@ ROMUP_Main
 	ld 		a,0
 	out 	(c),a
 	
-	; Rom nummer 0-30 31 is Lower ROM
+	; Rom number 0-30 31 is Lower ROM
 	inc 	bc
 	LD   	a,(ix+0)   ; ROM-Number
 	out 	(c),a
@@ -52,7 +52,7 @@ ROMUP_Main
 	; Data (Max data size is &4000+80)
 	ld de,#4080
 
-ROMUP_memoryloop
+ROMUP_memoryloop		; not a masterpiece ;-)
 
 	;; read a char from the file, character is returned in A register
 
@@ -372,8 +372,6 @@ romset
 	
 	
 	di	
-
-
 	call Wait4ARM_is_busy
 	
 	;reset write buffer pointer 0

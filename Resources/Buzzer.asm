@@ -29,23 +29,15 @@ buzz:		; |buzz,tone,rhythm
 	jr buzz_Main2
 	
 buzz_Main
-	; letzter
-	;ld c,(ix+0)
-
-	; erster
-	;ld c,(ix+2)
-
-	
-	; High-Bytes testen
+	; High-Bytes test
 	ld a,0
 	cp (ix+1)
 	jp nz,RSX_Error
 	cp (ix+3)
 	jp nz,RSX_Error
 	
-	; Werte ok?
+	; values ok?
 	ld a,3
-;	brk
 	LD  l,(IX+0)
     cp  l
 	jp 	c,RSX_Error
@@ -56,24 +48,21 @@ buzz_Main
 
 buzz_Main2
 	di
-	call SYM3_OLED_WaitReady
+	call wait_for_ARM_response
 	
 	ld bc,#FD41
 	ld a,#0
 	out (c),a
 	inc bc
 	
-;	LD  a,(IX+2)
 	out (c),h
-;	MAXAM
-;	LD  a,(IX+0)
 	out (c),l
 	
 	dec bc
 	ld a,80
 	out (c),a
 	
-	call SYM3_OLED_WaitReady
+	call wait_for_ARM_response
 	ei
 	
 	ret

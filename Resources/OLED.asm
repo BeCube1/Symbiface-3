@@ -26,15 +26,7 @@ RSX_OLED_SCROLL
 	cp 7
 	jp nz,RSX_Error
 
-
-	; letzter
-	;ld c,(ix+0)
-
-	; erster
-	;ld c,(ix+2)
-
-	
-	; High-Bytes testen
+	; test High-Byte
 	ld a,0
 	cp (ix+1)
 	jp nz,RSX_Error
@@ -55,7 +47,7 @@ RSX_OLED_SCROLL
 	
 OLED_SCROLL_SET_MAIN
 	di
-	call SYM3_OLED_WaitReady
+	call wait_for_ARM_response
 	
 	ld bc,#FD42
 	
@@ -84,16 +76,13 @@ OLED_SCROLL_SET_MAIN
 	ld a,(ix+0)
 	out (c),a	
 
-	
-	
+		
 	ld bc,#FD41
 	ld a,201	;		Function Oled Write data to SSD1306
 	out (c),a
-	call SYM3_OLED_WaitReady
+	call wait_for_ARM_response
 	ei
 	ret
-
-
 
 ; ------------------------------------------------------------------------
 
@@ -116,8 +105,8 @@ RSX_OLED_PRINTTEXT
 	
 OLED_PRINTTEXT_Main
 	LD   L,(IX+0)
-	LD   H,(IX+1)   ; HL = @a$ = Adresse des Descriptors
-	LD   A,(HL)     ; B = Länge des Strings
+	LD   H,(IX+1)   ; HL = @a$ = Address of Descriptor
+	LD   A,(HL)     ; B = Length of the string
 	cp   12 + 1
 	jp	 nc,RSX_Error
 	
@@ -125,15 +114,14 @@ OLED_PRINTTEXT_Main
 	INC  HL
 	LD   E,(HL)
 	INC  HL
-	LD   D,(HL)     ; DE = Adresse des Strings
+	LD   D,(HL)     ; DE = Address of the string
 
 OLED_PRINTTEXT_Main_WithoutRSX_Parse
 	di
 	push af
-	call SYM3_OLED_WaitReady
+	call wait_for_ARM_response
 	
-	
-	
+		
 	;Reset OLED-Write Pointer
 	ld bc,#FD41
 	ld a,0
@@ -154,11 +142,9 @@ OLED_PRINTTEXT_Main_exit:
 	ld bc,#FD41
 	ld a,202	;		Function Oled PrintText
 	out (c),a
-	call SYM3_OLED_WaitReady
+	call wait_for_ARM_response
 	ei
 	ret
-
-
 
 
 
@@ -166,15 +152,13 @@ OLED_PRINTTEXT_Main_exit:
 RSX_OLED_CLS
 ;2.2.1	200d	Oled clear display (black)
 	di
-	call SYM3_OLED_WaitReady
-;	call SYM3_OLED_TestReady
-;	ret z			; OLED is busy
+	call wait_for_ARM_response
 	
 	ld bc,#FD41
 	ld a,200	;		function clear display
 	out (c),a
 	
-	call SYM3_OLED_WaitReady
+	call wait_for_ARM_response
 	ei
 	ret
 ; ------------------------------------------------------------------------
@@ -183,7 +167,7 @@ SYM3_OLED_PrintText
 	di
 	; SYM3_OLED_Init_PrintText		; IN:     A=Font types 	10,18,26, DE=XY,  HL=Textpointer
 	push af
-	call SYM3_OLED_WaitReady
+	call wait_for_ARM_response
 	
 	ld bc,#FD41
 	ld a,0		; 			reset intern write buffer pointers (RTC, mouse, oled)
@@ -208,7 +192,7 @@ SYM3_OLED_PrintText_Exit
 	ld bc,#FD41
 	ld a,210	;		function Print text to display
 	out (c),a
-	call SYM3_OLED_WaitReady
+	call wait_for_ARM_response
 	
 	ei
 	ret
@@ -218,8 +202,6 @@ SYM3_OLED_PrintOneChar
 	ld bc,#FD42
 	out (c),a
 	ret	
-
-
 	
 ; ------------------------------------------------------------------------------
 ;	F202	Oled print text in Upper row 
@@ -227,7 +209,7 @@ SYM3_OLED_PrintOneChar
 Text2OLED_Upper			; HL=Zero-terminated Textstring
 	di
 	push hl
-	call Wait4ARM_is_busy
+	call wait_for_ARM_response
 	
 	ld bc,#fd42
 	pop hl
