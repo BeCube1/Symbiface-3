@@ -20,7 +20,6 @@ extra_rsxs
 	jp 		LED_Set_VU
 	jp 		buzz
 	jp 		buzz
-	jp 		reset
 	jp 		roms_print
 	jp 		ROMUP
 	jp 		romset
@@ -56,7 +55,6 @@ rsx_name_table
     defb 	'LED','V' + $80
     defb 	'BUZ','Z' + $80
     defb 	'BEE','P' + $80
-    defb 	'RESE','T' + $80
     defb 	'SROM','S' + $80
     defb 	'SROMU','P' + $80
     defb 	'SROMSE','T' + $80
@@ -114,7 +112,6 @@ RSX_Error
 	include "OLED.asm"
 	include "Version.asm"
 	include "Buzzer.asm"
-	include "Reset.asm"	
 	include "ROM.asm"
 	include "Net.asm"	
 	include "Log.asm"

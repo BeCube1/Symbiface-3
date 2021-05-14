@@ -69,7 +69,6 @@
         <int>28</int>
         <int>30</int>
         <int>34</int>
-        <int>35</int>
         <int>41</int>
         <int>43</int>
         <int>45</int>
@@ -222,28 +221,6 @@
       <IdOutputs />
       <IsOutputResource>false</IsOutputResource>
       <IsIncludeResource>true</IsIncludeResource>
-    </Resource>
-    <Resource>
-      <Id>35</Id>
-      <DisplayName>Reset.asm</DisplayName>
-      <RelativePath>Reset.asm</RelativePath>
-      <IdDependencies />
-      <IdOutputs>
-        <int>36</int>
-      </IdOutputs>
-      <IsOutputResource>false</IsOutputResource>
-      <IsIncludeResource>false</IsIncludeResource>
-    </Resource>
-    <Resource>
-      <Id>36</Id>
-      <DisplayName>Reset.bin</DisplayName>
-      <RelativePath>Reset.bin</RelativePath>
-      <IdDependencies>
-        <int>35</int>
-      </IdDependencies>
-      <IdOutputs />
-      <IsOutputResource>true</IsOutputResource>
-      <IsIncludeResource>false</IsIncludeResource>
     </Resource>
     <Resource>
       <Id>41</Id>
@@ -421,13 +398,6 @@
             <ResourceId>34</ResourceId>
             <ChildNodes />
             <Expanded>false</Expanded>
-          </Node>
-          <Node>
-            <IsFolder>false</IsFolder>
-            <FolderName />
-            <ResourceId>35</ResourceId>
-            <ChildNodes />
-            <Expanded>true</Expanded>
           </Node>
           <Node>
             <IsFolder>false</IsFolder>

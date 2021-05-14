@@ -76,7 +76,7 @@ RTC_SetTime		; RSTIME
 	ld a,100
 	out (c),a
 	
-	jp ARM_response
+	jp wait_for_ARM_response
 
 
 ; ------------------------------------------------------------------------------
@@ -93,7 +93,7 @@ RTC_GetTime		; RGTIME
 	ld a,101
 	out (c),a
 	
-	call ARM_response
+	call wait_for_ARM_response
 	
 	ld bc,&fd42
 	in a,(c)
@@ -118,7 +118,7 @@ RTC_Reset		; RRESET
 	ld a,102
 	out (c),a
 	
-	jp ARM_response
+	jp wait_for_ARM_response
 
 
 ; ------------------------------------------------------------------------------
@@ -191,7 +191,7 @@ RTC_SetDate		; RSDATE
 	ld a,110
 	out (c),a
 	
-	jp ARM_response
+	jp wait_for_ARM_response
 
 
 ; ------------------------------------------------------------------------------
@@ -208,7 +208,7 @@ RTC_GetDate		; RGDATE
 	ld a,111
 	out (c),a
 	
-	call ARM_response
+	call wait_for_ARM_response
 	
 	ld bc,&fd42
 	in a,(c)

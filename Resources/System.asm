@@ -13,9 +13,7 @@ PrintDFUName:
 	out (c),a
 	
 
-	call ARM_response
-;	jp nz,SUB_PRINT_8BIT_T			; Error
-	
+	call wait_for_ARM_response
 	
 	ld bc,&fd42	
 PrintDFUNameLoop

@@ -17,15 +17,13 @@
 ;	} while (c <> 10)
 version_cmd:
 	di
-	call SYM3_OLED_WaitReady
-;	call SYM3_OLED_TestReady
-;	ret z			; OLED is busy
+	call wait_for_ARM_response
 	
 	ld bc,#FD41
-	ld a,71	;		Function Get System info
+	ld a,71		; Function Get System info
 	out (c),a
 	
-	call SYM3_OLED_WaitReady
+	call wait_for_ARM_response
 	inc bc
 	ld bc,#FD42	
 version_cmd_Loop:	
